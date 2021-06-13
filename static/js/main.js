@@ -9,3 +9,24 @@ let mm;
 let cc;
 let dd;
 let yy;
+
+function calcDayOfBirth() {
+    console.log(birthYear.value)
+   mm = birthMonth.value;
+   dd = birthDay.value;
+   yearArr = birthYear.value.toString().split("");
+   cc = parseInt(yearArr.slice(0, 2).join(""));
+   yy = parseInt(yearArr.slice(2).join(""));
+  console.log(mm)
+  console.log(yy)
+  console.log(dd)
+  console.log(cc)
+  if (birthYear >= 2000) {
+    yy = 100 + parseInt(yearArr.slice(2).join(""));
+  }
+  let d = Math.floor(
+    (cc / 4 - 2 * cc - 1 + (5 * yy) / 4 + (26 * (mm + 1)) / 10 + dd) % 7
+  );
+  console.log(d)
+  return d;
+}
