@@ -5,6 +5,10 @@ let birthDay = document.getElementById("day");
 let male = document.getElementById("male");
 let female = document.getElementById("female");
 var akan = document.querySelector(".akan");
+
+const form = document.querySelector(".form");
+const myakan = document.querySelector(".myakan");
+
 let mm;
 let cc;
 let dd;
@@ -59,10 +63,12 @@ function getAkanName() {
       akanNames = akanMaleNames[theDay] ;
     }
      if (daysOfTheWeek[theDay] && female.checked) {
-      akanNames = akanFemaleName[theD] ;
+      akanNames = akanFemaleName[theDay] ;
     }
     akan.innerHTML = akanNames;
   }
   button.addEventListener("click", () => {
     getAkanName();
+    form.style.display = "none";
+    myakan.style.display = "block";
   });
