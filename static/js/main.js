@@ -30,3 +30,15 @@ function calcDayOfBirth() {
   console.log(d)
   return d;
 }
+
+function getAkanName() {
+    let akanMaleNames = [
+      "Kwasi",
+      "Kwadwo",
+      "Kwabena",
+      "Kwaku",
+      "Yaw",
+      "Kofi",
+      "Kwame",
+    ];
+    
