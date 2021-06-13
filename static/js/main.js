@@ -41,4 +41,28 @@ function getAkanName() {
       "Kofi",
       "Kwame",
     ];
-    
+
+
+    let akanFemaleName = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    let daysOfTheWeek = [
+      "sunday",
+      "monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let theDay = calcDayOfBirth();
+    var akanNames;
+    if (daysOfTheWeek[theDay] && male.checked) {
+      akanNames = akanMaleNames[theDay] ;
+    }
+     if (daysOfTheWeek[theDay] && female.checked) {
+      akanNames = akanFemaleName[theD] ;
+    }
+    akan.innerHTML = akanNames;
+  }
+  button.addEventListener("click", () => {
+    getAkanName();
+  });
